@@ -1,11 +1,11 @@
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
 int n;
 int x1, x2;
 int arr[210];
-int answer = 0;
 
 int main() {
     cin >> n;
@@ -18,11 +18,6 @@ int main() {
         }
     }
     
-    for (int i = 0; i < 210; i ++) {
-        if (arr[i] > answer) {
-            answer = arr[i];
-        }
-    }
-    cout << answer;
+    cout << *max_element(arr, arr + 210);
     return 0;
 }
