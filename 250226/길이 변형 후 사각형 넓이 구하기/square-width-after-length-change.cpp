@@ -7,7 +7,7 @@ int main() {
     cin >> width >> height;
     width  += 8;
     height *= 3;
-    cout << width << ' ' << height << ' ' << width * height;
+    cout << width << endl << height << endl << width * height;
 
     return 0;
 }
