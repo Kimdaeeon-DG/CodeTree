@@ -24,8 +24,8 @@ void getArea() {
 
 void delArea() {
     setNum();
-    for (int i = y2; i > y1; i--) {
-        for (int j = x2; j > x1; j--) {
+    for (int i = y2 - 1; i > y1; i--) {
+        for (int j = x2 - 1; j > x1; j--) {
             arr[i][j] = 0;
         } 
     }
