@@ -9,11 +9,11 @@ int answer = 0;
 
 int main() {
     cin >> N;
-    for (int i = 0; i < N; i++){
+    for (int k = 0; k < N; k++){
         cin >> x1 >> y1 >> x2 >> y2;
-        for (int j = x1; j < x2; j++){
-            for (int k = y1; k < y2; k++) {
-                arr[j+100][k+100] = 1; 
+        for (int i = x1; i < x2; i++){
+            for (int j = y1; j < y2; j++) {
+                arr[i+100][j+100] = 1; 
             }
         }
     }
