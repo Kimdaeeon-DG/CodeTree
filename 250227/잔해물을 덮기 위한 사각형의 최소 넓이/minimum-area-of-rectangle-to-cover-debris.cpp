@@ -15,8 +15,8 @@ void changeNum(int n) {
 void getArea(int n) {
     cin >> x1 >> y1 >> x2 >> y2;
     changeNum(1000);
-    for (int i = y1; i < y2 + 1; i++) {
-        for (int j = x1; j < x2 + 1; j++) {
+    for (int i = y1; i < y2; i++) {
+        for (int j = x1; j < x2; j++) {
             arr[i][j] = n;
         } 
     }
@@ -35,6 +35,6 @@ int main() {
         }
     }
     
-    cout << (max_x - min_x) * (max_y - min_y);
+    cout << (max_x - min_x + 1) * (max_y - min_y + 1);
     return 0;
 }
