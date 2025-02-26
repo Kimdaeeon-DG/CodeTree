@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 int x1, y1, x2, y2;
@@ -37,10 +38,10 @@ int main() {
 
     for (int i = 0; i < 2010; i++) {
         for (int j = 0; j < 2010; j++) {
-            if (arr[i][j] && min_x > j) min_x = j;
-            if (arr[i][j] && max_x < j) max_x = j;
-            if (arr[i][j] && min_y > i) min_y = i;
-            if (arr[i][j] && max_y < i) max_y = i;
+            if (arr[i][j]) min_x = min(j, min_x);
+            if (arr[i][j]) max_x = max(j, max_x);
+            if (arr[i][j]) min_y = min(i, min_y);
+            if (arr[i][j]) max_y = max(i, max_y);
         }
     }
     
