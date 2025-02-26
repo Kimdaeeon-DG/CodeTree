@@ -13,8 +13,8 @@ int main() {
         if (c == 'L') direction = -1;
         else direction = 1;
         for (int j = 0; j < x; j++) {
-            arr[locate]++;
             locate += direction;
+            arr[locate]++;
         }
     }
 
