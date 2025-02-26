@@ -21,8 +21,8 @@ int main() {
     cin >> x1 >> y1 >> x2 >> y2;
     setArea(0);
 
-    for (int i = 0; i < 2010; i++) {
-        for (int j = 0; j < 2010; j ++) {
+    for (int i = 0; i < 2000; i++) {
+        for (int j = 0; j < 2000; j ++) {
             if (arr[i][j] == 1) {
                 answer++;
             }
