@@ -3,11 +3,7 @@ using namespace std;
 
 int main(void){
     int a;
-    if (a == 1) {
-        cout << 't';
-    }
-    else {
-        cout << 'f';
-    }
+    cin >> a;
+    cout << ((a==1) ? "t":"f");
     return 0;
 }
