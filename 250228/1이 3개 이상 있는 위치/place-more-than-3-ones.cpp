@@ -6,7 +6,7 @@ int n;
 int grid[100][100];
 int dx[4] = {0, 1, 0, -1};
 int dy[4] = {1, 0, -1, 0};
-int dir_num, answer;
+int dir_num, answer = 0;
 int nx, ny, count;
 
 bool InRange(int x, int y) {
