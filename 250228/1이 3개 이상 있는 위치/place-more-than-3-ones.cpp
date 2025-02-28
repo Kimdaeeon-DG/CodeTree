@@ -6,7 +6,7 @@ int n;
 int grid[100][100];
 int dx[4] = {0, 1, 0, -1};
 int dy[4] = {1, 0, -1, 0};
-int dir_num, answer = 0;
+int answer = 0;
 int nx, ny, count;
 
 bool InRange(int x, int y) {
@@ -26,14 +26,13 @@ int main() {
         for (int j = 0; j < n; j++) {
             count = 0;
             for (int k = 0; k < 4; k++) {
-                nx = i + dy[k];
-                ny = j + dx[k];
+                nx = j + dy[k];
+                ny = i + dx[k];
                 if (InRange(nx, ny)) {
                     if (grid[ny][nx]) count++;
                 }
-                
             }
-            if (count > 2) {
+            if (count >= 3) {
                 answer++;
             }
         }
