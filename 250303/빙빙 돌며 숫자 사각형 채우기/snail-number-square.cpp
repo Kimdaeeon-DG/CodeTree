@@ -2,20 +2,35 @@
 
 using namespace std;
 
-int n;
-int r, c;
-int a[100][100];
+int n, m;
+int arr[100][100] = {};
+int dx[4] = {1, 0, -1, 0};
+int dy[4] = {0, 1, 0, -1};
+int x = 0, y = 0;
+int nx, ny, dir_num = 0;
+
+bool InRange(int x, int y) {
+    return 0 <= x && x < n && 0 <= y && y < m;
+}
 
 int main() {
-    cin >> n >> r >> c;
+    cin >> n >> m;
 
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= n; j++) {
-            cin >> a[i][j];
-        }
+    arr[y][x] = 1;
+    for (int i = 2; i <= m * n; i++) {
+        nx = x + dx[dir_num];
+        ny = y + dy[dir_num];
+        if (!InRange(ny, nx) || arr[ny][nx] != 0) dir_num = (dir_num + 1) %4;
+        x = x + dx[dir_num];
+        y = y + dy[dir_num];
+        arr[y][x] = i;
     }
 
-    // Please write your code here.
-
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cout << arr[i][j] << ' ';
+        }
+        cout << endl;
+    }
     return 0;
 }
