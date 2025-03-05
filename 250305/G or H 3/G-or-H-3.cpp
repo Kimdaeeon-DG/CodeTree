@@ -18,7 +18,7 @@ int main() {
         else arr[x-1] = 2;
     }
 
-    for (int i = 0; i < K; i++) {
+    for (int i = 0; i < 10000 - K + 1; i++) {
         int count = 0;
         for (int j = i; j <= N + i; j++) {
             count += arr[j];
