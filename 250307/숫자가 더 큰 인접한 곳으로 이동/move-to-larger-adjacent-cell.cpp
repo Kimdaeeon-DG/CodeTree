@@ -7,10 +7,9 @@ int r, c;
 int a[100][100];
 int dx[4] = {0, 0, -1, 1};
 int dy[4] = {-1, 1, 0, 0};
-int flag = 1;
 
 int InRange(int x, int y) {
-    return 0 <= x && x <= n && 0 <= y && y <= n;
+    return 0 <= x && x < n && 0 <= y && y < n;
 }
 
 int main() {
@@ -25,7 +24,7 @@ int main() {
 
     int dir_num = 0;
     cout << a[y][x] << ' ';
-    while (flag) {
+    while (dir_num < 4) {
         int nx = x + dx[dir_num];
         int ny = y + dy[dir_num]; 
         if (InRange(nx, ny)) {
@@ -37,7 +36,6 @@ int main() {
             }
         }
         dir_num++;
-        if (dir_num == 4) break;
     }
 
     return 0;
