@@ -12,14 +12,18 @@ def InRange(x, y):
 
 x, y = 0, 0
 arr[0][0] = 'A'
+c_code = 66
 
-for i in range(1, n * m):
+for _ in range(1, n * m):
     nx, ny = x + dx[dir_num], y + dy[dir_num]
     if not InRange(nx, ny):
         dir_num = (dir_num + 1) % 4
         nx, ny = x + dx[dir_num], y + dy[dir_num]
     x, y = nx, ny
-    arr[y][x] = chr((i + 65)%91)
+    arr[y][x] = chr(c_code)
+    c_code += 1
+    if c_code == 90:
+        c_code -= 25
 
 for row in arr:
     print(' '.join(map(str, row)))
