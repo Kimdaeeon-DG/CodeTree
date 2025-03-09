@@ -19,7 +19,7 @@ for i in range(1, n * m):
         dir_num = (dir_num + 1) % 4
         nx, ny = x + dx[dir_num], y + dy[dir_num]
     x, y = nx, ny
-    arr[y][x] = chr(i + 65)
+    arr[y][x] = chr((i + 65)%91)
 
 for row in arr:
     print(' '.join(map(str, row)))
