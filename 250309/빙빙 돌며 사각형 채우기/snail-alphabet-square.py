@@ -22,8 +22,8 @@ for _ in range(1, n * m):
     x, y = nx, ny
     arr[y][x] = chr(c_code)
     c_code += 1
-    if c_code == 90:
-        c_code -= 25
+    if c_code == 91:
+        c_code -= 26
 
 for row in arr:
     print(' '.join(map(str, row)))
